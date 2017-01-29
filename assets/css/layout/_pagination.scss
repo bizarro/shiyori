@@ -1,0 +1,27 @@
+.pager {
+  margin-top: 40px;
+}
+
+.pager-list {
+  text-align: center;
+}
+
+.pager-item {
+  display: inline;
+}
+
+.pager-link {
+  border-radius: 3px;
+  color: #fff;
+  display: inline-block;
+  font: 14px/30px 'Montserrat';
+  height: 30px;
+  text-align: center;
+  transition: all .4s;
+  width: 30px;
+
+  &:hover,
+  &.is-active {
+    background: #fff;
+  }
+}

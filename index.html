@@ -1,0 +1,624 @@
+<html>
+  <head>
+    <!--[if lt IE 9]><script src="http://static.tumblr.com/0nxdyrj/6zenchlfy/html5shiv.min.js"></script><![endif]-->
+
+    <!-- Charset -->
+    <meta charset="UTF-8">
+
+    <!-- Title -->
+    <title>{Title}</title>
+
+    <!-- Description -->
+    {block:Description}
+    <meta name="description" content="{MetaDescription}">
+    {/block:Description}
+
+    <!-- Viewport -->
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+
+    <!-- Icons -->
+    <link rel="shortcut icon" href="{Favicon}">
+    <link rel="apple-touch-icon-precomposed" href="{PortraitURL-128}">
+
+    <!-- RSS -->
+    <link rel="alternate" type="application/rss+xml" href="{RSS}">
+
+    {block:Hidden}
+    <!-- Header -->
+    <meta name="if:Show Header" content="1">
+    <meta name="color:Header Background Color" content="#1C1C1C">
+    <meta name="image:Header Background Image" content="http://static.tumblr.com/0nxdyrj/SKtnmoek7/header.jpg">
+    <meta name="select:Header Background Position" content="center" title="Center">
+    <meta name="select:Header Background Position" content="right" title="Right">
+    <meta name="select:Header Background Position" content="left" title="Left">
+    <meta name="select:Header Background Position" content="top" title="Top">
+    <meta name="select:Header Background Position" content="bottom" title="Bottom">
+
+    <!-- Menu -->
+    <meta name="if:Show Menu" content="1">
+    <meta name="if:Show Archive" content="1">
+    <meta name="if:Show Random" content="1">
+    <meta name="if:Show RSS" content="1">
+    <meta name="if:Show Search" content="1">
+
+    <!-- Content -->
+    <meta name="text:Google Web Font" content="Lato">
+    <meta name="font:Body" content="Helvetica">
+    <meta name="color:Body Background Color" content="#F2F2F2">
+
+    <!-- Colors -->
+    <meta name="color:Main Color" content="#DA2828">
+    <meta name="color:Secondary Color" content="#FA4646">
+
+    <!-- Endless Scrolling -->
+    <meta name="if:Endless Scrolling" content="1">
+
+    <!-- Layout -->
+    <meta name="select:Layout" content="_700px" title="700px">
+    <meta name="select:Layout" content="_600px" title="600px">
+    <meta name="select:Layout" content="_500px" title="500px">
+    <meta name="select:Layout" content="_400px" title="400px">
+    <meta name="select:Layout" content="_300px" title="300px">
+
+    <!-- Grid -->
+    <meta name="if:Grid" content="0">
+
+    <!-- Disqus -->
+    <meta name="text:Disqus Shortname" content="" />
+
+    <!-- Google Analytics -->
+    <meta name="text:Google Analytics ID" content="" />
+    {/block:Hidden}
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="http://static.tumblr.com/0nxdyrj/8lLnulqfy/shiyori.css">
+
+    <style>
+      body {
+        background: {color:Body Background Color} url('{image:Body Background Image}');
+        font: 14px/24px {block:IfGoogleWebFont}{text:Google Web Font},{/block:IfGoogleWebFont} {font:Body}, 'sans-serif';
+      }
+
+
+      /* Header */
+      .header {
+        background: {color:Header Background Color} url('{image:Header Background Image}') {select:Header Background Position};
+      }
+
+      .header-description {
+        font: 400 16px/26px {block:IfGoogleWebFont}{text:Google Web Font},{/block:IfGoogleWebFont} {font:Body}, 'sans-serif';
+      }
+
+
+      /* Menu */
+      .menu-line {
+        background: {color:Main Color};
+      }
+
+      .menu-search:focus {
+        color: {color:Main Color};
+      }
+
+
+      /* Post */
+      .post-title {
+        color: {color:Main Color};
+      }
+
+      .post-title:after {
+        background: {color:Main Color};
+      }
+
+      .post-title-link {
+        color: {color:Main Color};
+      }
+
+      .post-caption a {
+        border-bottom: 1px solid {color:Secondary Color};
+      }
+
+      .post-tag-link {
+        background: {color:Secondary Color};
+        border: 1px solid {color:Secondary Color};
+      }
+
+      .post-tag-link:hover {
+        color: {color:Secondary Color};
+      }
+
+      .post-social-link:hover {
+        color: {color:Main Color};
+        fill: {color:Main Color};
+      }
+
+
+      /* Notes */
+      .note blockquote a {
+        font-weight: normal;
+        font-family: {block:IfGoogleWebFont}{text:Google Web Font},{/block:IfGoogleWebFont} {font:Body}, 'sans-serif';
+      }
+
+
+      /* Pagination */
+      .pager-link {
+        background: {color:Main Color};
+        border: 1px solid {color:Main Color};
+      }
+
+      .pager-link:hover,
+      .pager-link.is-active {
+        color: {color:Main Color};
+      }
+
+
+      /* Custom CSS */
+      {CustomCSS}
+    </style>
+  </head>
+  <body class="{select:Layout}{block:IfGrid} is-grid{/block:IfGrid}{block:PermalinkPage} is-permalink{/block:PermalinkPage}">
+    {block:IfShowHeader}
+    <svg display="none" width="0" height="0" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <defs>
+        <symbol id="icon-facebook" viewBox="0 0 56.693 56.693">
+          <title>Icon Facebook</title>
+          <path d="M40.43 21.74h-7.645v-5.015c0-1.883 1.248-2.322 2.127-2.322h5.395V6.125l-7.43-.03c-8.248 0-10.125 6.175-10.125 10.126v5.52h-4.77v8.53h4.77v24.136h10.033V30.27h6.77l.875-8.53z"/>
+        </symbol>
+        <symbol id="icon-google" viewBox="0 0 56.693 56.693">
+          <title>Icon Google+</title>
+          <path d="M52.218 25.852h-7.512v-7.51c0-.573-.465-1.04-1.037-1.04h-2.14c-.576 0-1.04.467-1.04 1.04v7.51h-7.513c-.572 0-1.04.467-1.04 1.04v2.14c0 .574.468 1.04 1.04 1.04h7.512v7.513c0 .574.464 1.04 1.04 1.04h2.14c.57 0 1.036-.466 1.036-1.04V30.07h7.512c.572 0 1.04-.465 1.04-1.04v-2.138c0-.574-.468-1.04-1.04-1.04z"/><path d="M26.974 32.438c-1.58-1.12-3.016-2.76-3.04-3.264 0-.918.08-1.357 2.14-2.96 2.662-2.085 4.128-4.825 4.128-7.72 0-2.625-.802-4.957-2.167-6.595h1.06c.218 0 .433-.07.608-.197l2.955-2.14c.367-.264.52-.733.38-1.162-.14-.427-.536-.72-.987-.72H18.836c-1.446 0-2.915.256-4.357.752-4.816 1.66-8.184 5.765-8.184 9.978 0 5.97 4.624 10.493 10.805 10.635-.122.473-.183.94-.183 1.396 0 .92.233 1.792.713 2.634h-.17c-5.892 0-11.21 2.89-13.23 7.193-.525 1.12-.793 2.25-.793 3.367 0 1.086.28 2.13.826 3.113 1.27 2.27 3.994 4.03 7.677 4.96 1.9.48 3.944.726 6.065.726 1.906 0 3.723-.246 5.403-.732 5.238-1.52 8.625-5.376 8.625-9.827 0-4.27-1.374-6.828-5.06-9.435zm-16.69 9.777c0-3.107 3.946-5.832 8.445-5.832h.12c.98.012 1.934.156 2.834.432.31.213.607.416.893.61 2.084 1.42 3.46 2.358 3.844 3.862.09.38.136.758.136 1.125 0 3.87-2.885 5.83-8.578 5.83-4.315 0-7.695-2.646-7.695-6.027zm4.093-29.357c.703-.803 1.624-1.227 2.658-1.227l.117.003c2.92.086 5.716 3.34 6.23 7.256.29 2.19-.2 4.252-1.3 5.508-.706.805-1.614 1.23-2.69 1.23h-.049c-2.86-.09-5.716-3.468-6.227-7.378-.287-2.186.173-4.15 1.26-5.392z"/>
+        </symbol>
+        <symbol id="icon-twitter" viewBox="0 0 56.693 56.693">
+          <title>Icon Twitter</title>
+          <path d="M52.837 15.065c-1.81.805-3.76 1.348-5.805 1.59 2.088-1.25 3.69-3.23 4.444-5.59-1.953 1.158-4.115 2-6.418 2.453-1.843-1.964-4.47-3.192-7.377-3.192-5.58 0-10.105 4.525-10.105 10.107 0 .79.09 1.562.262 2.303-8.4-.422-15.848-4.445-20.833-10.56-.87 1.492-1.368 3.228-1.368 5.082 0 3.506 1.784 6.6 4.496 8.412-1.656-.053-3.215-.508-4.578-1.265v.128c0 4.896 3.483 8.98 8.107 9.91-.847.23-1.74.354-2.662.354-.652 0-1.285-.063-1.902-.182 1.287 4.015 5.02 6.938 9.44 7.02-3.458 2.71-7.815 4.326-12.55 4.326-.816 0-1.62-.047-2.412-.14 4.474 2.868 9.786 4.54 15.493 4.54 18.59 0 28.756-15.4 28.756-28.756 0-.438-.01-.875-.028-1.31 1.974-1.42 3.688-3.202 5.042-5.23z"/>
+        </symbol>
+        <symbol id="icon-share" viewBox="0 0 16 16">
+          <title>Icon Share</title>
+          <path d="M0 4h6.75l-2.5 2H2v7h10v-2l2-1.6V15H0zm16 2l-5 4V8.008c-3.333-.12-5.34 1.365-7.033 3.015C3.967 7.1 7.46 4.01 11 3.977V2zm0 0" fill="#000" fill-rule="evenodd"/>
+        </symbol>
+        <symbol id="icon-reblog" viewBox="0 0 21 21">
+          <title>Icon Reblog</title>
+          <path d="M5.01092527,5.99908429 L16.0088498,5.99908429 L16.136,9.508 L20.836,4.752 L16.136,0.083 L16.1360004,3.01110845 L2.09985349,3.01110845 C1.50585349,3.01110845 0.979248041,3.44726568 0.979248041,4.45007306 L0.979248041,10.9999998 L3.98376463,8.30993634 L3.98376463,6.89801007 C3.98376463,6.20867902 4.71892527,5.99908429 5.01092527,5.99908429 Z"></path><path d="M17.1420002,13.2800293 C17.1420002,13.5720293 17.022957,14.0490723 16.730957,14.0490723 L4.92919922,14.0490723 L4.92919922,11 L0.5,15.806 L4.92919922,20.5103758 L5.00469971,16.9990234 L18.9700928,16.9990234 C19.5640928,16.9990234 19.9453125,16.4010001 19.9453125,15.8060001 L19.9453125,9.5324707 L17.142,12.203"></path>
+        </symbol>
+      </defs>
+    </svg>
+    <header id="header" class="header">
+      <div class="header-wrapper">
+        <div class="header-center">
+          {block:ShowAvatar}
+          <figure class="header-avatar is-{AvatarShape}">
+            <a href="/">
+              <img src="{PortraitURL-128}" alt="{Title}" title="{Title}" class="header-avatar-img">
+            </a>
+          </figure>
+          {/block:ShowAvatar}
+          {block:ShowTitle}
+          <h1 class="header-title">
+            <a href="/">
+              {Title}
+            </a>
+          </h1>
+          {/block:ShowTitle}
+          {block:ShowDescription}
+          <div class="header-description">
+            {Description}
+          </div>
+          {/block:ShowDescription}
+        </div>
+      </div>
+    </header>
+    {/block:IfShowHeader}
+    {block:IfShowMenu}
+    <nav id="menu" class="menu">
+      <div class="menu-responsive">
+        <a href="#" class="menu-responsive-icon"></a>
+      </div>
+
+      <ul class="menu-list">
+        {block:HasPages}
+        {block:Pages}
+        <li class="menu-item">
+          <a href="{URL}" title="{Label}" class="menu-link">
+            {Label} <span class="menu-line"></span>
+          </a>
+        </li>
+        {/block:Pages}
+        {/block:HasPages}
+        {block:AskEnabled}
+        <li class="menu-item">
+          <a href="/ask" title="{AskLabel}" class="menu-link">
+            {AskLabel} <span class="menu-line"></span>
+          </a>
+        </li>
+        {/block:AskEnabled}
+        {block:SubmissionsEnabled}
+        <li class="menu-item">
+          <a href="/submit" title="{SubmitLabel}" class="menu-link">
+            {SubmitLabel} <span class="menu-line"></span>
+          </a>
+        </li>
+        {/block:SubmissionsEnabled}
+        {block:IfShowArchive}
+        <li class="menu-item">
+          <a href="/archive" title="{lang:Archive}" class="menu-link">
+            {lang:Archive} <span class="menu-line"></span>
+          </a>
+        </li>
+        {/block:IfShowArchive}
+        {block:IfShowRandom}
+        <li class="menu-item">
+          <a href="/random" title="{lang:Random}" class="menu-link">
+            {lang:Random} <span class="menu-line"></span>
+          </a>
+        </li>
+        {/block:IfShowRandom}
+        {block:IfShowRSS}
+        <li class="menu-item">
+          <a href="{RSS}" title="{lang:Subscribe via RSS}" class="menu-link">
+            {lang:RSS} <span class="menu-line"></span>
+          </a>
+        </li>
+        {/block:IfShowRSS}
+        {block:IfShowSearch}
+        <li class="menu-item">
+          <form class="menu-form" action="/search" method="get">
+            <input class="menu-search" type="text" name="q" value="{SearchQuery}" placeholder="{lang:Search}" />
+          </form>
+        </li>
+        {/block:IfShowSearch}
+      </ul>
+    </nav>
+    {/block:IfShowMenu}
+    <div id="container" class="container">
+      {block:SearchPage}
+      <div class="posts-header">
+        {lang:SearchResultCount results for SearchQuery}
+        {block:NoSearchResults}{lang:No posts containing SearchQuery}{/block:NoSearchResults}
+      </div>
+      {/block:SearchPage}
+      {block:TagPage}
+      <div class="posts-header">
+        {lang:TagResultCount posts tagged Tag}
+      </div>
+      {/block:TagPage}
+      <section id="posts" class="posts-wrapper">
+        {block:Posts}
+        <article class="post{block:Text} post-text{/block:Text}{block:Photo} post-photo{/block:Photo}{block:Panorama} post-panorama{/block:Panorama}{block:Photoset} post-photoset{/block:Photoset}{block:Quote} post-quote{/block:Quote}{block:Link} post-link{/block:Link}{block:Chat} post-chat{/block:Chat}{block:Audio} post-audio{/block:Audio}{block:Video} post-video{/block:Video}{block:Answer} post-answer{/block:Answer}">
+
+          {block:Text}
+          {block:Title}
+          <header class="post-header">
+            <h3 class="post-title">
+              {Title}
+            </h3>
+          </header>
+          {/block:Title}
+          <section class="post-caption">
+            {Body}
+          </section>
+          {/block:Text}
+
+          {block:Photo}
+          <figure class="post-figure">
+            {LinkOpenTag}
+            <img src="{PhotoURL-1280}" alt="{PhotoAlt}" class="post-figure-img">
+            {LinkCloseTag}
+
+            {block:Caption}
+            <figcaption class="post-caption">
+              {Caption}
+            </figcaption>
+            {/block:Caption}
+          </figure>
+          {/block:Photo}
+
+          {block:Photoset}
+          <figure class="post-figure">
+            <div class="photoset">
+              {Photoset}
+            </div>
+
+            {block:Caption}
+            <figcaption class="post-caption">
+              {Caption}
+            </figcaption>
+            {/block:Caption}
+          </figure>
+          {/block:Photoset}
+
+          {block:Quote}
+          <blockquote class="post-blockquote">
+            <h3 class="post-title">
+              {Quote}
+            </h3>
+            {block:Source}
+            <footer class="post-caption">
+              - {Source}
+            </footer>
+            {/block:Source}
+          </blockquote>
+          {/block:Quote}
+
+          {block:Link}
+          <header class="post-header">
+            <h3 class="post-title">
+              <a href="{URL}" title="{Name}" {Target} class="post-title-link">
+                {Name}
+              </a>
+            </h3>
+          </header>
+          {block:Description}
+          <section class="post-caption">
+            {Description}
+          </section>
+          {/block:Description}
+          {/block:Link}
+
+          {block:Chat}
+          {block:Title}
+          <header class="post-header">
+            <h3 class="post-title">
+              {Title}
+            </h3>
+          </header>
+          {/block:Title}
+          <ul class="post-caption post-chat-list">
+            {block:Lines}
+            <li>
+              {block:Label}<strong>{Label}</strong>{/block:Label} {Line}
+            </li>
+            {/block:Lines}
+          </ul>
+          {/block:Chat}
+
+          {block:Audio}
+          <figure class="post-figure post-audio-player">
+            {block:AudioEmbed}
+            {AudioEmbed color="white"}
+            {/block:AudioEmbed}
+          </figure>
+          {block:Caption}
+          <section class="post-caption">
+            {Caption}
+          </section>
+          {/block:Caption}
+          {/block:Audio}
+
+          {block:Video}
+          <figure class="post-figure post-media">
+            {VideoEmbed-700}
+          </figure>
+          {block:Caption}
+          <section class="post-caption">
+            {Caption}
+          </section>
+          {/block:Caption}
+          {/block:Video}
+
+          {block:Answer}
+          <blockquote class="post-blockquote">
+            <h3 class="post-title">
+              {Question}
+            </h3>
+            <footer class="post-caption">
+              <img src="{AskerPortraitURL-24}" class="post-answer-image"> Asked by {Asker}
+            </footer>
+          </blockquote>
+          <section class="post-caption">
+            {block:Answerer}
+            {Answer}
+            {/block:Answerer}
+
+            {Replies}
+          </section>
+          {/block:Answer}
+
+          <footer class="post-footer">
+            {block:HasTags}
+            <ul class="post-tag-list">
+              {block:Tags}
+              <li class="post-tag-item">
+                <a href="{TagURL}" title="{Tag}" class="post-tag-link">{Tag}</a>
+              </li>
+              {/block:Tags}
+            </ul>
+            {/block:HasTags}
+
+            {block:Date}
+            <ul class="post-info-list">
+              {block:RebloggedFrom}
+              <li class="post-info-item">
+                <a href="{ReblogParentURL}" title="{ReblogParentTitle}" class="post-info-link post-info-via">
+                  <svg class="post-info-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-reblog"></use></svg> {ReblogParentName}
+                </a>
+              </li>
+              {/block:RebloggedFrom}
+              {block:ContentSource}
+              <li class="post-info-item">
+                <a href="{SourceURL}" title="{SourceTitle}" class="post-info-link post-info-source">
+                  {lang:Source}: {SourceTitle}
+                </a>
+              </li>
+              {/block:ContentSource}
+              <li class="post-info-item">
+                <a href="{Permalink}" title="{lang:Posted on DayOfMonth Month Year}" class="post-info-link post-info-time">
+                  {TimeAgo}
+                </a>
+              </li>
+              {block:NoteCount}
+              <li class="post-info-item">
+                <a href="{Permalink}#notes" class="post-info-link post-info-notes">
+                  {NoteCountWithLabel}
+                </a>
+              </li>
+              {/block:NoteCount}
+            </ul>
+
+            <ul class="post-share-list">
+              <li class="post-share-item post-share-social">
+                <a href="javascript: void(0);">
+                  <svg class="post-share-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-share"></use></svg>
+                </a>
+
+                <ul class="post-social-list">
+                  <li class="post-social-item">
+                    <a href="http://facebook.com/sharer.php?u={URLEncodedPermalink}&t={URLEncodedTitle}" target="_blank" title="{lang:Share this}" class="post-social-link">
+                      <svg class="post-social-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-facebook"></use></svg> Facebook
+                    </a>
+                  </li>
+                  <li class="post-social-item">
+                    <a href="https://twitter.com/intent/tweet?text={URLEncodedTweetSummary}" target="_blank" title="{lang:Tweet this}" class="post-social-link">
+                      <svg class="post-social-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-twitter"></use></svg> Twitter
+                    </a>
+                  </li>
+                  <li class="post-social-item">
+                    <a href="https://plus.google.com/share?url={URLEncodedPermalink}" target="_blank" title="{lang:Share this}" class="post-social-link">
+                      <svg class="post-social-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-google"></use></svg> Google+
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="post-share-item post-share-reblog">
+                {ReblogButton color="black" size="15"}
+              </li>
+              <li class="post-share-item post-share-like">
+                {LikeButton color="black" size="15"}
+              </li>
+            </ul>
+            {/block:Date}
+
+            <div class="clear"></div>
+          </footer>
+        </article>
+        {/block:Posts}
+
+        {block:PermalinkPage}
+        {block:PostNotes}
+        <section id="notes" class="notes-wrapper">
+          {PostNotes-16}
+        </section>
+        {/block:PostNotes}
+
+        {block:IfDisqusShortname}
+        <section id="disqus" class="disqus-wrapper">
+          <div id="disqus_thread"></div>
+
+          <script type="text/javascript">
+            (function() {
+              var dsq = document.createElement('script');
+              dsq.type = 'text/javascript';
+              dsq.async = true;
+              dsq.src = '//{text:Disqus Shortname}.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+          </script>
+
+          <noscript>
+            Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+          </noscript>
+
+          <a href="http://disqus.com" class="dsq-brlink disqus-link">Blog comments powered by Disqus.</a>
+        </section>
+        {/block:IfDisqusShortname}
+        {/block:PermalinkPage}
+      </section>
+
+      {block:Pagination}
+      <nav id="pager" class="pager">
+        <ul class="pager-list">
+          {block:PreviousPage}
+          <li class="pager-item">
+            <a href="{PreviousPage}" class="pager-link pager-prev">
+              &lsaquo;
+            </a>
+          </li>
+          {/block:PreviousPage}
+          {block:JumpPagination length="5"}
+          {block:CurrentPage}
+          <li class="pager-item">
+            <a href="javascript: void(0);" class="pager-link is-active">
+              {PageNumber}
+            </a>
+          </li>
+          {/block:CurrentPage}
+          {block:JumpPage}
+          <li class="pager-item">
+            <a href="{URL}" class="pager-link">
+              {PageNumber}
+            </a>
+          </li>
+          {/block:JumpPage}
+          {/block:JumpPagination}
+          {block:NextPage}
+          <li class="pager-item">
+            <a href="{NextPage}" class="pager-link pager-next">
+              &rsaquo;
+            </a>
+          </li>
+          {/block:NextPage}
+        </ul>
+      </nav>
+      {/block:Pagination}
+
+      {block:PermalinkPagination}
+      <nav id="pager" class="pager">
+        <ul class="pager-list">
+          {block:NextPost}
+          <li class="pager-item">
+            <a href="{NextPost}" class="pager-link">
+              &lsaquo;
+            </a>
+          </li>
+          {/block:NextPost}
+          {block:PreviousPost}
+          <li class="pager-item">
+            <a href="{PreviousPost}" class="pager-link">
+              &rsaquo;
+            </a>
+          </li>
+          {/block:PreviousPost}
+        </ul>
+      </nav>
+      {/block:PermalinkPagination}
+
+      <footer id="footer" class="footer">
+        &copy; <a href="http://shiyori-theme.tumblr.com/" class="footer-link">Shiyori Theme</a> by <a href="http://www.dotcore.com.br/" class="footer-link">Luis Henrique Bizarro</a> for <a href="http://www.tumblr.com/" class="footer-link">Tumblr</a>.
+      </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="http://static.tumblr.com/0nxdyrj/Actnnxrn0/jquery.js"></script>
+
+    <script>
+      var Shiyori = {};
+
+      Shiyori.INDEX = {block:IndexPage}true{/block:IndexPage}{block:PermalinkPage}false{/block:PermalinkPage};
+      Shiyori.GRID = {block:IfGrid}true{/block:IfGrid}{block:IfNotGrid}false{/block:IfNotGrid};
+      Shiyori.LAYOUT = "{select:Layout}";
+      Shiyori.ENDLESS_SCROLLING = {block:IfEndlessScrolling}true{/block:IfEndlessScrolling}{block:IfNotEndlessScrolling}false{/block:IfNotEndlessScrolling};
+      Shiyori.ENDLESS_SCROLLING_LOADING = "{lang:Loading}";
+      Shiyori.ENDLESS_SCROLLING_FINISHED = "{lang:No more posts}";
+    </script>
+
+    <script src="http://static.tumblr.com/0nxdyrj/x6fnuacrn/shiyori.js"></script>
+
+    <!-- Fonts -->
+    <script src="http://static.tumblr.com/0nxdyrj/YrHnmpggp/webfont.js"></script>
+
+    <script>
+      WebFont.load({
+        google: {
+          families: [{block:IfGoogleWebFont}'{text:Google Web Font}', {/block:IfGoogleWebFont}'Montserrat']
+        }
+       });
+    </script>
+
+    {block:IfGoogleAnalyticsID}
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', '{text:Google Analytics ID}', 'auto');
+      ga('send', 'pageview');
+    </script>
+    {/block:IfGoogleAnalyticsID}
+  </body>
+</html>

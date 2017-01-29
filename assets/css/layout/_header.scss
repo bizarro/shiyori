@@ -1,0 +1,79 @@
+.header {
+  display: table;
+  padding: 50px 0;
+  position: relative;
+  width: 100%;
+
+  @media screen and (max-width: 800px) {
+    padding: 25px 0;
+  }
+}
+
+.header-wrapper {
+  color: #fff;
+  display: table-cell;
+  text-align: center;
+  text-shadow: 0 0 5px rgba(0, 0, 0, .8);
+  vertical-align: middle;
+}
+
+.header-center {
+  margin: auto;
+  max-width: 800px;
+  width: 90%;
+}
+
+.header-avatar {
+  border: 5px solid rgba(255, 255, 255, .4);
+  box-shadow: 0 0 5px rgba(0, 0, 0, .4);
+  display: inline-block;
+  margin-bottom: 25px;
+  overflow: hidden;
+
+  &.is-square {
+    border-radius: 3px;
+  }
+
+  &.is-circle {
+    border-radius: 50%;
+  }
+}
+
+.header-avatar-img {
+  display: block;
+}
+
+.header-title {
+  font: bold 40px 'Montserrat';
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  word-wrap: break-word;
+
+  &:after {
+    background: rgba(255, 255, 255, .4);
+    background: #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .4);
+    content: '';
+    display: block;
+    height: 2px;
+    margin: 25px auto;
+    width: 100px;
+  }
+
+  @media screen and (max-width: 800px) {
+    font-size: 22px;
+  }
+}
+
+.header-description {
+  letter-spacing: 1px;
+
+  a {
+    border-bottom: 1px solid #fff;
+  }
+
+  @media screen and (max-width: 800px) {
+    font-size: 14px;
+    line-height: 24px;
+  }
+}

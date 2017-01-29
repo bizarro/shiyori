@@ -1,0 +1,21 @@
+.post-media {
+  height: 0;
+  margin-bottom: 10px;
+  overflow: hidden;
+  padding-bottom: 67.5%;
+  padding-top: 25px;
+  position: relative;
+
+  iframe,
+  video {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+}
+
+.post-audio-player iframe {
+  width: 100%;
+}

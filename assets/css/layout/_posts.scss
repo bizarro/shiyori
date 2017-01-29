@@ -1,0 +1,400 @@
+/**
+ * Container.
+ */
+.container {
+  margin: auto;
+  max-width: 1800px;
+  width: 90%;
+}
+
+
+/**
+ * Wrapper.
+ */
+.posts-wrapper {
+  margin: auto;
+  width: 100%;
+}
+
+
+/**
+ * Header.
+ */
+.posts-header {
+  font: bold 14px/30px 'Montserrat';
+  margin: 50px auto;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+
+/**
+ * Wrappers.
+ */
+.post,
+.notes-wrapper,
+.disqus-wrapper {
+  background: #fff;
+  border-radius: 2px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, .1);
+  margin: 50px auto;
+  width: 100%;
+
+  ._300px & {
+    max-width: 300px;
+  }
+
+  ._400px & {
+    max-width: 400px;
+  }
+
+  ._500px & {
+    max-width: 500px;
+  }
+
+  ._600px & {
+      max-width: 600px;
+  }
+
+  ._700px &,
+  .is-permalink & {
+    max-width: 700px;
+  }
+}
+
+.post {
+  .is-grid & {
+    margin: 25px auto 0;
+  }
+}
+
+
+/**
+ * Title.
+ */
+.post-title {
+  font: 600 22px 'Montserrat';
+  letter-spacing: -1px;
+  text-transform: uppercase;
+  word-wrap: break-word;
+
+  &:after {
+    content: '';
+    display: block;
+    height: 2px;
+    margin: 25px 0 0;
+    width: 50px;
+  }
+}
+
+
+/**
+ * Figure.
+ */
+.post-figure {
+  overflow: hidden;
+  text-align: center;
+  width: 100%;
+}
+
+.post-figure-img {
+  display: block;
+  width: 100%;
+}
+
+
+/**
+ * Standards.
+ */
+.post-header,
+.post-caption,
+.post-blockquote {
+  padding: 25px 25px 0;
+  text-align: left;
+}
+
+
+/**
+ * Caption.
+ */
+.post-caption {
+  word-wrap: break-word;
+
+  a {
+    color: #444;
+  }
+
+  blockquote {
+    border-left: 2px solid #ccc;
+    margin: 15px 0 15px 15px;
+    padding-left: 15px;
+  }
+
+  h2 {
+    font: 16px/24px 'Montserrat';
+    text-transform: uppercase;
+  }
+
+  hr {
+    background: #ccc;
+    border: none;
+    height: 1px;
+  }
+
+  * + h2 {
+    margin-top: 15px;
+  }
+
+  * + hr {
+    margin-top: 15px;
+  }
+
+  * + p {
+    margin-top: 15px;
+  }
+
+  * + ul,
+  * + ol {
+    margin-top: 15px;
+
+    ul,
+    ol {
+      margin-left: 15px;
+    }
+  }
+}
+
+.post-blockquote .post-caption {
+  padding-left: 0;
+}
+
+
+/**
+ * Link.
+ */
+.post-header-link:before {
+  content: '\203A';
+  display: block;
+  float: left;
+  margin-right: 10px;
+  margin-top: -2px;
+}
+
+
+/**
+ * Chat.
+ */
+.post-chat-list {
+  list-style: none;
+}
+
+
+/**
+ * Read More.
+ */
+.read_more {
+  font: bold 14px 'Montserrat';
+  text-transform: uppercase;
+
+  &:after {
+    content: ' \00bb';
+  }
+}
+
+
+/**
+ * Answer.
+ */
+.post-answer-image {
+  border-radius: 3px;
+  display: inline-block;
+  margin-right: 7px;
+  vertical-align: middle;
+}
+
+.post-answer .post-blockquote .post-caption {
+  color: #666;
+  font: bold 12px 'Montserrat';
+  text-transform: uppercase;
+}
+
+
+/**
+ * Footer.
+ */
+.post-footer {
+  padding: 25px;
+  position: relative;
+}
+
+
+/**
+ * Tags.
+ */
+.post-tag-list {
+  margin-bottom: 25px;
+}
+
+.post-tag-item {
+  display: inline;
+}
+
+.post-tag-link {
+  border-radius: 2px;
+  color: #fff;
+  display: inline-block;
+  font: 400 12px 'Montserrat';
+  margin: 5px 5px 3px 0;
+  padding: 5px 8px;
+  text-transform: uppercase;
+  transition: all .4s;
+
+  &:hover {
+    background: #fff;
+  }
+
+  &:before {
+    content: '#';
+  }
+}
+
+
+/**
+ * Info.
+ */
+.post-info-list {
+  float: left;
+  width: 80%;
+}
+
+.post-info-item {
+  display: inline;
+}
+
+.post-info-link {
+  color: #bbb;
+  font: 12px/24px 'Montserrat';
+  text-transform: lowercase;
+}
+
+.post-info-icon {
+  display: inline-block;
+  height: 10px;
+  margin-right: 2px;
+  opacity: .3;
+  vertical-align: middle;
+  width: 10px;
+}
+
+.post-info-notes:before {
+  color: #ddd;
+  content: ' \00b7 ';
+  font-weight: 400;
+  margin: 0 3px;
+}
+
+.post-info-source {
+  display: block;
+  text-transform: none;
+}
+
+.post-info-via {
+  display: block;
+}
+
+
+
+/**
+ * Share.
+ */
+.post-share-list {
+  bottom: 23px;
+  position: absolute;
+  right: 25px;
+}
+
+.post-share-item {
+  cursor: pointer;
+  display: inline;
+  margin: 0 2px;
+  opacity: .2;
+  position: relative;
+  transition: all .4s;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &:hover .post-social-list {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.post-share-reblog a,
+.post-share-like div {
+  display: inline-block !important;
+}
+
+.post-share-icon {
+  display: inline-block;
+  height: 17px;
+  width: 15px;
+}
+
+
+/**
+ * Social.
+ */
+.post-social-list {
+  background: #fefefe;
+  border-radius: 2px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, .2);
+  left: 50%;
+  margin-left: -55px;
+  opacity: 0;
+  padding: 5px;
+  position: absolute;
+  top: -94px;
+  transition: all .4s;
+  visibility: hidden;
+  width: 110px;
+  z-index: 100;
+
+  &:after {
+    background: #fff;
+    bottom: -5px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, .05);
+    content: '';
+    display: block;
+    height: 10px;
+    left: 50%;
+    margin-left: -5px;
+    position: absolute;
+    transform: rotate(45deg);
+    width: 10px;
+    z-index: 99;
+  }
+}
+
+.post-social-item {
+  display: block;
+  height: 25px;
+  padding: 0 5px;
+}
+
+.post-social-link {
+  color: #444;
+  font: bold 10px/25px 'Montserrat';
+  text-transform: uppercase;
+  transition: all .4s;
+}
+
+.post-social-icon {
+  display: inline-block;
+  height: 15px;
+  margin-right: 5px;
+  margin-top: -2px;
+  vertical-align: middle;
+  width: 15px;
+}

@@ -1,0 +1,48 @@
+.notes-wrapper {
+  color: #888;
+  font: 12px 'Montserrat';
+  margin: 0 auto 50px;
+  padding: 25px;
+  text-transform: uppercase;
+}
+
+.notes {
+  list-style: none;
+}
+
+.note {
+  line-height: 22px;
+  padding: 10px 0;
+
+  &:first-child {
+    padding-top: 0;
+  }
+
+  .avatar {
+    border-radius: 3px;
+    margin-right: 10px;
+    margin-top: -2px;
+    vertical-align: middle;
+  }
+
+  a {
+    color: #444;
+    font-weight: bold;
+  }
+
+  blockquote {
+    border-left: 2px solid #ccc;
+    margin: 15px 0 0 15px;
+    padding-left: 15px;
+
+    a {
+      font-weight: normal;
+      text-transform: none;
+    }
+  }
+}
+
+.more_notes_link {
+  font-size: 14px;
+  margin-top: 15px;
+}

@@ -1,0 +1,89 @@
+.menu {
+  background: #fff;
+  margin-bottom: 25px;
+}
+
+.menu-list {
+  margin: auto;
+  max-width: 1800px;
+  padding: 0 50px;
+  text-align: center;
+
+  @media screen and (max-width: 1024px) {
+    display: none;
+  }
+}
+
+.menu-item {
+  display: inline;
+
+  @media screen and (max-width: 1024px) {
+    display: block;
+    width: 100%;
+  }
+}
+
+.menu-link,
+.menu-search {
+  color: #444;
+  display: inline-block;
+  font: 400 14px/60px 'Montserrat';
+  letter-spacing: 1px;
+  margin: 0 20px;
+  position: relative;
+  text-transform: uppercase;
+}
+
+.menu-link {
+  @media screen and (max-width: 1024px) {
+    line-height: 30px;
+    margin-bottom: 25px;
+  }
+}
+
+.menu-line {
+  bottom: 0;
+  display: block;
+  height: 2px;
+  position: absolute;
+  transition: width .25s;
+  width: 0;
+
+  .menu-link:hover & {
+    width: 100%;
+  }
+}
+
+.menu-responsive {
+  display: none;
+  height: 60px;
+  position: relative;
+
+  @media screen and (max-width: 1024px) {
+    display: block;
+  }
+}
+
+.menu-responsive-icon {
+  border-bottom: 3px solid #444;
+  border-top: 10px double #444;
+  display: block;
+  height: 17px;
+  margin-top: -9px;
+  position: absolute;
+  right: 25px;
+  top: 50%;
+  width: 20px;
+}
+
+.menu-form {
+  display: inline;
+}
+
+.menu-search {
+  border: none;
+  display: inline-block;
+  outline: none;
+  text-align: center;
+  width: 70px;
+}
